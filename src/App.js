@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import React, { useState, createContext } from 'react';
+
+export const Context = createContext();
 
 function App() {
+
+  const [sidebarVisible, setSidebarVisible] = useState(false)
+
+  const settingSidebar = () => {
+    setSidebarVisible(!sidebarVisible)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Context.Provider
+      value={{
+        visibility: sidebarVisible,
+        setVisibility: settingSidebar
+      }}
+    >
+      <Header/>
+    </Context.Provider>
+    </>
   );
 }
 
