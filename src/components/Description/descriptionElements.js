@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 100%;
+    width: 60%;
     display: flex;
     height: 80vh;
     position: absolute;
@@ -10,7 +10,7 @@ export const Container = styled.div`
 `
 
 export const InfoBox = styled.div`
-    width: 70%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -18,7 +18,7 @@ export const InfoBox = styled.div`
 `
 
 export const Top = styled.div`
-    width: 60%;
+    width: 70%;
     height: 40%;
 `
 

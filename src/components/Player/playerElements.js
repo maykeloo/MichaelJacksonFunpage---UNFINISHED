@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {BiPlay} from 'react-icons/bi'
+import {BiPlay, BiPause} from 'react-icons/bi'
 
 export const Container = styled.div`
     width: 130vh;
@@ -40,11 +40,19 @@ export const PlayIcon = styled(BiPlay)`
     z-index: 100;
 `
 
-export const ProgressBox = styled.div`
-    width: 40vw;
+export const PauseIcon = styled(BiPause)`
+    font-size: 4em;
+    cursor: pointer;
     position: absolute;
-    height: 200px;
+    z-index: 100;
+    transform: translateX(-2px);
+`
+
+export const ProgressBox = styled.div`
+    width: 35vw;
+    position: absolute;
     top: 0px;
+    right: -15vw;
     display: flex;
     flex-direction: column;
 `
@@ -73,19 +81,23 @@ export const Bottom = styled.div`
     margin-top: 10px;
 `
 
-export const Progressbar = styled.div`
+export const Progressbar = styled.input`
     width: 100%;
     height:  3px;
     background: #adb5bd;
     position: relative;
+    -webkit-appearance: none;
 
-    &:after {
+    &::-webkit-slider-runnable-track {
         position: absolute;
-        width: 60%;
+        width: 100%;
         height: 100%;
         background: black;
         content: '';
+        z-index: -1;
     }
+
+
 `
 
 export const Video = styled.video`

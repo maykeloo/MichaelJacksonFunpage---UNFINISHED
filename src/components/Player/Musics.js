@@ -8,5 +8,6 @@ export const music = [
         title: 'Earth Song',
         audio: earthsong,
         video: earthsongVideo,
+        duration: "05:02"
     }
 ]
