@@ -36,6 +36,8 @@ export const CircleIn = styled.div`
 export const PlayIcon = styled(BiPlay)`
     font-size: 4em;
     cursor: pointer;
+    position: absolute;
+    z-index: 100;
 `
 
 export const ProgressBox = styled.div`
