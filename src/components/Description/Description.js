@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, InfoBox, Name, NameText, Text, Top } from './descriptionElements'
+import { Container, InfoBox, Name, NameText, Text, Top, Video } from './descriptionElements'
 
 const Description = () => {
     return (

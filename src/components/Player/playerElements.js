@@ -2,12 +2,12 @@ import styled from "styled-components";
 import {BiPlay} from 'react-icons/bi'
 
 export const Container = styled.div`
-    width: 110vh;
-    height: 110vh;
+    width: 130vh;
+    height: 130vh;
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50vh);
+    transform: translateY(-70vh);
     z-index: 0;
 `
 
@@ -42,7 +42,7 @@ export const ProgressBox = styled.div`
     width: 40vw;
     position: absolute;
     height: 200px;
-    top: -150px;
+    top: 0px;
     display: flex;
     flex-direction: column;
 `
@@ -55,13 +55,13 @@ export const Top = styled.div`
 `
 
 export const Title = styled.span`
-    font-size: 5em;
+    font-size: 4vw;
     font-weight: 600;
     font-family: var(--font_2);
 `
 
 export const Time = styled.span`
-    font-size: 2em;
+    font-size: 1.5vw;
     font-family: var(--font_2);
     font-weight: 300;
 `
@@ -83,5 +83,33 @@ export const Progressbar = styled.div`
         height: 100%;
         background: black;
         content: '';
+    }
+`
+
+export const Video = styled.video`
+    height: 60%;
+    position: absolute;
+    right: 50px;
+    bottom: -150px;
+`   
+
+export const SetMusicBar = styled.div`
+    width: 40%;
+    height: 50px;
+    position: absolute;
+    transform: translate(80px, 80px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 40%;
+        background: black;
+        height: 2px;
+        content: '';
+        transform: translate(-50%, -50%); 
     }
 `

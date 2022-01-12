@@ -1,7 +1,7 @@
 import React from 'react'
-import { Bottom, CircleIn, CircleOut, Container, PlayIcon, Progressbar, ProgressBox, Time, Title, Top } from './playerElements'
+import { Bottom, CircleIn, Video, CircleOut, Container, PlayIcon, Progressbar, ProgressBox, Time, Title, Top, SetMusicBar } from './playerElements'
 
-
+import video1 from '../../video/earthsong.mp4'
 
 const Player = () => {
     return (
@@ -11,7 +11,7 @@ const Player = () => {
                     <CircleIn>
                         <ProgressBox>
                             <Top>
-                                <Title>Gypsy Eyes</Title>
+                                <Title>Earthsong</Title>
                                 <Time>2:12 / 3:46</Time>
                             </Top>
                             <Bottom>
@@ -22,8 +22,13 @@ const Player = () => {
                         </ProgressBox>
                         <PlayIcon/>
                     </CircleIn>
+                    <SetMusicBar>
+                        <Time>Previous</Time>
+                        <Time>Next</Time>
+                    </SetMusicBar>
                 </CircleOut>
             </Container> 
+            <Video src={video1} muted autoPlay playsInline/> 
         </>
     )
 }
