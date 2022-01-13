@@ -114,8 +114,9 @@ const Player = () => {
     const seconds = Math.floor(audioPlayer.current.duration);
     setDuration(seconds);
     progressBar.current.max = seconds;
+    video?.current?.play()
     setTimeout(() => setContentVisible(true), 2000);
-  }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);
+  }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState, musicCounter]);
 
   const calculateTime = (secs) => {
     const minutes = Math.floor(secs / 60);
@@ -131,6 +132,7 @@ const Player = () => {
     if (!prevValue) {
       audioPlayer.current.play();
       video.current.play();
+      video.current.currentTime = progressBar.current.value;
       animationRef.current = requestAnimationFrame(whilePlaying);
     } else {
       audioPlayer.current.pause();

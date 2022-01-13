@@ -79,8 +79,8 @@ export const CurrentTime = styled.span`
 export const Time = styled.button`
     border: 0;
     background: transparent;
-    font-size: 1.5vw;
-    font-family: var(--font_2);
+    font-size: 1.8vw;
+    font-family: var(--font_3);
     font-weight: 300;
     transition: 0.3s;
     justify-self: flex-end;

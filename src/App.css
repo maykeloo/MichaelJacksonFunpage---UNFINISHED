@@ -9,6 +9,14 @@ body {
   overflow-x: hidden;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
 :root {
   --font_1: "Be Vietnam Pro", Halvetica, Arial, sans-serif;
   --font_2: "Varela", Halvetica, Arial, sans-serif;
