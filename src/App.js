@@ -9,7 +9,8 @@ function App() {
   const [sidebarVisible, setSidebarVisible] = useState(false)
 
   const settingSidebar = () => {
-    setSidebarVisible(!sidebarVisible)
+    setTimeout(() =>setSidebarVisible(!sidebarVisible), 300)
+    
   }
 
   return (

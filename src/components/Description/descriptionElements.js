@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion'
+
 
 export const Container = styled.div`
     width: 60%;
@@ -36,11 +38,18 @@ export const Name = styled.div`
     width: 80%;
 `
 
-export const NameText = styled.p`
+export const NameText = styled(motion.div)`
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+`
+
+export const TextLabel = styled.div`
+    display: flex;
     font-size: 11vw;
-    text-indent: 132px; 
     font-family: var(--font_1);
     line-height: 20vh;
     font-weight: 300;
+    height: 50%;
 `
 

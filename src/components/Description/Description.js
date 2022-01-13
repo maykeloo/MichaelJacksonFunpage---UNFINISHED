@@ -1,5 +1,35 @@
 import React from 'react'
-import { Container, InfoBox, Name, NameText, Text, Top, Video } from './descriptionElements'
+import { Container, InfoBox, Name, NameText, Text, TextLabel, Top, Video } from './descriptionElements'
+
+import { motion } from 'framer-motion'
+
+const animation = {
+    start: {
+        y: -200
+    },
+
+    animate: {
+        y: 0,
+
+        transition: {
+        duration: 1,        
+        type:'spring',
+        stiffness: 50,}
+    }
+}
+
+const name = {
+    start: {
+      y: 0,
+    },
+    animate: {
+      y: 0,
+      transition: {
+        staggerChildren: 0.04,
+        staggerDirection: -1,
+      },
+    },
+  };
 
 const Description = () => {
     return (
@@ -12,8 +42,25 @@ const Description = () => {
                         </Text>
                     </Top>
                     <Name>
-                        <NameText>
-                            Michael <br /> Jackson
+                        <NameText className="name" variants={name} initial="start" animate="animate">
+                            <TextLabel>
+                            <motion.div variants={animation}>M</motion.div>
+                            <motion.div variants={animation}>i</motion.div>
+                            <motion.div variants={animation}>c</motion.div>  
+                            <motion.div variants={animation}>h</motion.div>  
+                            <motion.div variants={animation}>a</motion.div>  
+                            <motion.div variants={animation}>e</motion.div> 
+                            <motion.div variants={animation}>l</motion.div> 
+                            </TextLabel>
+                              <TextLabel>
+                              <motion.div variants={animation}>J</motion.div>
+                            <motion.div variants={animation}>a</motion.div>
+                            <motion.div variants={animation}>c</motion.div>  
+                            <motion.div variants={animation}>k</motion.div>  
+                            <motion.div variants={animation}>s</motion.div>  
+                            <motion.div variants={animation}>o</motion.div> 
+                            <motion.div variants={animation}>n</motion.div> 
+                            </TextLabel>
                         </NameText>
                     </Name>
                 </InfoBox>

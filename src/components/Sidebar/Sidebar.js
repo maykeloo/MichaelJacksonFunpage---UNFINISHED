@@ -11,9 +11,9 @@ const Sidebar = () => {
         <>
             <Container visibility={visibility}>
                 <Content>
-                    <Label>Favorites</Label>
+                    <Label style={{justifyContent: 'center'}}>Favorites</Label>
                     <Label style={{justifyContent: 'center'}}>Playlists</Label>
-                    <Label style={{justifyContent: 'flex-end'}}>About</Label>
+                    <Label style={{justifyContent: 'center'}}>About</Label>
                 </Content>
             </Container>
         </>

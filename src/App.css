@@ -5,9 +5,21 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 :root {
   --font_1: "Be Vietnam Pro", Halvetica, Arial, sans-serif;
   --font_2: "Varela", Halvetica, Arial, sans-serif;
   --font_3: "Yantramanav", Halvetica, Arial, sans-serif;
 
+}
+
+.name > span {
+  font-size: 11vw;
+  text-indent: 132px; 
+  font-family: var(--font_1);
+  line-height: 20vh;
+  font-weight: 300;
 }

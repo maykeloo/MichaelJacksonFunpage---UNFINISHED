@@ -5,7 +5,7 @@ export const Container = styled.div`
     height: 100vh;
     background: black;
     position: fixed;
-    transition: 1s;
+    transition: 1s cubic-bezier(.83,.04,1,.75);
     display: flex;
     z-index: 10;   
     justify-content: center;
@@ -24,7 +24,7 @@ export const Content = styled.div`
 export const Label = styled.div`
     width: 100%;
     height: 20%;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid grey;
     display: flex;
     align-items: flex-end;
     font-size: 10vw;
@@ -33,9 +33,12 @@ export const Label = styled.div`
     transition: 1s;
     -webkit-text-stroke: 2px white;
     color: black;
+    position: relative;
 
     &:hover {   
             transform: skewX(-5deg);
             color: white;
+            width: 80%;
     }
+    
 `
