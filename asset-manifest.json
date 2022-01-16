@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/michael-jackson/static/css/main.759cb010.css",
-    "main.js": "/michael-jackson/static/js/main.c45b3278.js",
+    "main.css": "/michael-jackson/static/css/main.aa3f1696.css",
+    "main.js": "/michael-jackson/static/js/main.8bac35f7.js",
     "static/media/smoothcriminal.mp4": "/michael-jackson/static/media/smoothcriminal.d72b31223ae1d3a0d513.mp4",
     "static/media/earthsong.mp4": "/michael-jackson/static/media/earthsong.68608b9a0e01ebc5cfc3.mp4",
     "static/media/blackandwhite.mp4": "/michael-jackson/static/media/blackandwhite.6d43c853dbfca6962c00.mp4",
@@ -14,13 +14,13 @@
     "static/media/earthsong.mp3": "/michael-jackson/static/media/earthsong.f55ef004ef49d68e852d.mp3",
     "static/media/billiejean.mp3": "/michael-jackson/static/media/billiejean.731b9858263648d56eab.mp3",
     "static/media/thriller.mp3": "/michael-jackson/static/media/thriller.f07068a9001308113fa7.mp3",
-    "static/media/michael1.jpg": "/michael-jackson/static/media/michael1.c74c6b9cd0f40a489dee.jpg",
+    "static/media/michael1.jpg": "/michael-jackson/static/media/michael1.82e13d21f704ee7db35e.jpg",
     "index.html": "/michael-jackson/index.html",
-    "main.759cb010.css.map": "/michael-jackson/static/css/main.759cb010.css.map",
-    "main.c45b3278.js.map": "/michael-jackson/static/js/main.c45b3278.js.map"
+    "main.aa3f1696.css.map": "/michael-jackson/static/css/main.aa3f1696.css.map",
+    "main.8bac35f7.js.map": "/michael-jackson/static/js/main.8bac35f7.js.map"
   },
   "entrypoints": [
-    "static/css/main.759cb010.css",
-    "static/js/main.c45b3278.js"
+    "static/css/main.aa3f1696.css",
+    "static/js/main.8bac35f7.js"
   ]
 }
