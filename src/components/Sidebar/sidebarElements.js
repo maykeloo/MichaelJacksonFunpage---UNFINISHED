@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -21,7 +22,7 @@ export const Content = styled.div`
     justify-content: space-around;
 `
 
-export const Label = styled.div`
+export const Label = styled(Link)`
     width: 100%;
     height: 20%;
     border-bottom: 2px solid grey;
@@ -34,6 +35,7 @@ export const Label = styled.div`
     -webkit-text-stroke: 2px white;
     color: black;
     position: relative;
+    text-decoration: none;
 
     &:hover {   
             transform: skewX(-5deg);

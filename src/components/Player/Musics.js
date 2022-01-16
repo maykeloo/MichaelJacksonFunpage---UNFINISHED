@@ -21,31 +21,38 @@ export const music = [
         title: 'Earth Song',
         audio: earthsong,
         video: earthsongVideo,
+        year: 1982,
     },
     {
         title: 'Billie Jean',
         audio: billiejean,
         video: billiejeanVideo,
+        year: 1982,
     },
     {
         title: 'Thriller',
         audio: thriller,
         video: thrillerVideo,
+        year: 1982,
     },
     {
         title: 'Bad',
         audio: bad,
         video: badVideo,
+        year: 1987,
+
     },
     {
         title: 'Smooth Criminal',
         audio: smoothcriminal,
         video: smoothcriminalVideo,
+        year: 1988,
     },
     {
         title: 'Black & White',
         audio: blackandwhite,
         video: blackandwhiteVideo,
+        year: 1991,
     },
 
 ]

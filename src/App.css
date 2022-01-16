@@ -3,10 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+    font-family: var(--font_1); 
 }
 
 body {
   overflow-x: hidden;
+  height: 100vh;  
 }
 
 body::-webkit-scrollbar {
@@ -31,3 +33,7 @@ body {
   line-height: 20vh;
   font-weight: 300;
 }
+html {
+  overflow-x: hidden;
+}
+

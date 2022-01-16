@@ -16,14 +16,16 @@ import {
   ListElement,
   Box3,
 } from "./navbarElements";
-
 import { Context } from "../../App";
-
 import image1 from "../../images/michael1.jpg";
+import { useSelector, useDispatch } from "react-redux";
+import { addFavourite, deleteFavourite } from "../../Redux/actions";
 
 const Navbar = () => {
+
   const context = useContext(Context);
-  const { visibility, setVisibility } = context;
+  const { visibility, setVisibility, currentlyPlaying } = context;
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -42,15 +44,15 @@ const Navbar = () => {
 
           <Box2>
             <List>
-              <ListElement>Add to Favorite</ListElement>
-              <ListElement>Hide a Track</ListElement>
-              <ListElement>Add to Playlist</ListElement>
+              <ListElement onClick={() => dispatch(addFavourite(currentlyPlaying))}>
+                Add to Favorite
+              </ListElement>
               <ListElement>To Share</ListElement>
             </List>
           </Box2>
 
           <Box3>
-            <Text>About</Text>
+            <Text id="about">About</Text>
           </Box3>
         </Buttonsbar>
       </Container>

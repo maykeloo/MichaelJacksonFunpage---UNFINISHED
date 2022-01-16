@@ -71,6 +71,14 @@ export const Box1 = styled.div`
 export const Text = styled.span`
     font-size: 1.5vw;
     font-family: var(--font_1);
+
+    #about {
+        &:hover {
+            color: white;
+            background: black;
+            padding: 10px;
+        } 
+    }
 `
 
 
@@ -108,7 +116,7 @@ export const Box3 = styled.div`
 
 export const Image = styled.img`
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 50px;
     width: 40%;
     z-index: 1;

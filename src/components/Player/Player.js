@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import {
   Bottom,
   CircleIn,
@@ -19,10 +19,11 @@ import {
   Line,
   CurrentTime,
 } from "./playerElements";
+import { Context } from "../../App";
 
 import { music } from "./Musics";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useViewportScroll, useTransform } from "framer-motion";
 
 const pathVariants = {
   hidden: {
@@ -99,10 +100,18 @@ const titleExit = {
 };
 
 const Player = () => {
+
+  const {scrollY} = useViewportScroll();
+  const y1 = useTransform(scrollY, [0, 100], [0, -50]);
+
   const audioPlayer = useRef();
   const progressBar = useRef();
   const animationRef = useRef(0);
   const video = useRef();
+
+  const context = useContext(Context)
+  const {setCurrentlyPlaying} = context; 
+
 
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(0);
@@ -116,7 +125,8 @@ const Player = () => {
     progressBar.current.max = seconds;
     video?.current?.play()
     setTimeout(() => setContentVisible(true), 2000);
-  }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState, musicCounter]);
+    setCurrentlyPlaying(music[musicCounter])
+  }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState, musicCounter], music[musicCounter].title);
 
   const calculateTime = (secs) => {
     const minutes = Math.floor(secs / 60);
@@ -170,7 +180,7 @@ const Player = () => {
       setContentVisible(false)
       setTimeout(() => setContentVisible(true), 1000)
   }
-
+  
   return (
     <>
       <Container>
@@ -309,6 +319,7 @@ const Player = () => {
         <audio
           src={music[musicCounter].audio}
           ref={audioPlayer}
+          loop
           style={{ display: "none" }}
         ></audio>
       </Container>
@@ -320,8 +331,10 @@ const Player = () => {
         animate="animate"
         src={music[musicCounter].video}
         muted
+        loop
         ref={video}
         playsInline
+        style={{y: y1, x: 0}}
       />}
     </AnimatePresence>
     </>
